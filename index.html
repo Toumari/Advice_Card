@@ -21,7 +21,23 @@
         <h1 class="quote">
           “Don’t be afraid to give up the good to go for the great.”
         </h1>
-        <img src="/images/pattern-divider-desktop.svg" alt="" class="divider" />
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="/images/pattern-divider-mobile.svg"
+          />
+          <source
+            media="(min-width: 769px)"
+            srcset="/images/pattern-divider-desktop.svg"
+          />
+          <source srcset="/images/pattern-divider-desktop.svg" />
+          <img
+            src="/images/pattern-divider-mobile.svg"
+            alt=""
+            class="divider"
+          />
+        </picture>
+
         <button class="quote-btn">
           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
             <path
