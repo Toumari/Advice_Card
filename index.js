@@ -3,6 +3,10 @@ const quoteButton = document.querySelector(".quote-btn");
 const advice = document.querySelector("small");
 
 quoteButton.addEventListener("click", async () => {
+  generateQuote();
+});
+
+const generateQuote = async () => {
   const quote = await fetch("https://api.adviceslip.com/advice", {
     cache: "no-cache",
   });
@@ -11,4 +15,6 @@ quoteButton.addEventListener("click", async () => {
   console.log(quoteData);
   quoteText.textContent = quoteData.slip.advice;
   advice.textContent = `Advice #${quoteData.slip.id}`;
-});
+};
+
+generateQuote();
